@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<!-- Макет превью ссылки (og:image). Снимается скриптом tools/og.mjs в assets/img/og.jpg -->
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+  html,body{margin:0;width:1200px;height:630px;overflow:hidden;background:#1b1b1e}
+  .og{position:relative;width:1200px;height:630px;display:grid;grid-template-columns:1fr 520px;align-items:center;
+    background:radial-gradient(42% 80% at 78% 50%,#2e2d30 0%,#1b1b1e 72%);color:var(--ivory)}
+  .og__text{padding:0 0 0 76px}
+  .og__eyebrow{display:flex;align-items:center;gap:14px;font:500 17px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--green-2)}
+  .og__eyebrow::before{content:'';width:36px;height:1px;background:currentColor}
+  .og__name{margin:26px 0 0;font:600 112px/.9 var(--serif)}
+  .og__name span{display:block}
+  .og__name span+span{padding-left:.4em}
+  .og__route{margin-top:34px;display:flex;align-items:center;gap:16px;font:600 26px/1 var(--mono);letter-spacing:.06em}
+  .og__route i{font-style:normal;color:var(--green-2)}
+  .og__cities{margin-top:12px;font-size:21px;color:var(--muted-d)}
+  .og__photo img{width:560px;height:560px;object-fit:cover;margin-left:-40px;
+    -webkit-mask-image:radial-gradient(closest-side at 50% 46%,#000 62%,transparent 100%);mask-image:radial-gradient(closest-side at 50% 46%,#000 62%,transparent 100%)}
+  .og__mark{position:absolute;left:76px;bottom:46px;display:flex;align-items:center;gap:10px}
+  .og__mark b{font:600 22px/1 var(--serif);letter-spacing:.2em;text-transform:uppercase}
+  .og__mark span{font:600 12px/1 var(--mono);letter-spacing:.12em;padding:5px 7px 4px;border-radius:4px;background:var(--green)}
+  .og__facts{position:absolute;left:330px;bottom:46px;font-size:19px;color:var(--muted-d)}
+  .og__facts b{color:var(--ivory);font-weight:600}
+</style>
+</head>
+<body>
+  <div class="og">
+    <div class="og__text">
+      <p class="og__eyebrow">Брокер чартерных рейсов</p>
+      <h1 class="og__name"><span>Ислам</span><span>Арсакаев</span></h1>
+      <p class="og__route">GRV · MCX <i>→</i> MED · JED</p>
+      <p class="og__cities">Прямые рейсы Грозный и Махачкала — Медина и Джидда</p>
+    </div>
+    <div class="og__photo"><img src="../assets/img/islam-1034.jpg" alt=""></div>
+    <div class="og__mark"><b>Arsakaev</b><span>KSA</span></div>
+    <p class="og__facts"><b>10 000+</b> клиентов · офис в Грозном · на связи 24/7</p>
+  </div>
+</body>
+</html>
