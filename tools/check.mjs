@@ -62,7 +62,8 @@ const SIZES = { pc: [1440, 900], phone: [390, 664], se: [375, 548], android: [36
 const [VW, VH] = SIZES[mode] || SIZES.pc;
 await send('Emulation.setDeviceMetricsOverride', { width: VW, height: VH, deviceScaleFactor: phone ? 2 : 1, mobile: phone }, s);
 if (phone) await send('Emulation.setTouchEmulationEnabled', { enabled: true, maxTouchPoints: 5 }, s);
-await send('Page.navigate', { url: `http://127.0.0.1:${PORT}/` }, s);
+// URL=https://arsakaev.vercel.app — проверить живой сайт вместо локального
+await send('Page.navigate', { url: process.env.URL || `http://127.0.0.1:${PORT}/` }, s);
 await sleep(2500);
 const ev = async x => (await send('Runtime.evaluate', { expression: x, returnByValue: true, awaitPromise: true }, s)).result.value;
 
